@@ -1,0 +1,304 @@
+@charset "utf-8";
+
+img,iframe{border:0;}
+form{padding:0;margin:0;}
+button{overflow:visible;}
+textarea,input{outline:0;resize:none;}
+body,html{margin:0;padding:0;width:100%;}
+
+body{
+	color:#333;
+	font:13px Arial;
+	width:1030px;
+	margin:0 auto;
+}
+
+/*---------------------------------------
+
+	GLOBAL
+
+-----------------------------------------*/
+.main-title{
+	color:#a54848;
+	font:20px Arial;
+	margin:0 0 20px;
+	text-align:center
+}
+
+a{
+	color:#009cde;
+	border-bottom-color:#009cde;
+	transition:color .3s ease, border-bottom-color .3s ease;
+}
+a:hover{
+	color:#f17937;
+	border-bottom-color:#f17937;
+}
+
+a.button,
+input.button{
+	display:block;
+	color:#212020;
+	text-decoration:none;
+	font:14px/24px Arial;
+	border:1px solid #161616;
+	padding:0 15px;
+	border-radius:10px;
+	background-color:#d5d4d4;
+	transition:all .3s ease;
+	cursor:pointer;
+}
+a.button:hover,
+input.button:hover{
+	background-color:#f6f5f5
+}
+/*---------------------------------------
+	Loader
+-----------------------------------------*/
+.popups #circular3dG{
+	position:absolute;
+	left:50%;
+	top:350px;
+	width:58px;
+	height:58px;
+	margin:-29px 0 0 -29px;
+	opacity:0;
+	visibility:hidden;
+	transform:scale(0.8);
+	transition:all .3s ease;
+}
+body.loading .popups #circular3dG{
+	transform:scale(1);
+	opacity:1;
+	visibility:visible;
+}
+body.loading .content-block > *{
+  -webkit-filter: blur(5px);
+     -moz-filter: blur(5px);
+       -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.popups #overlay{
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background-color: rgba(255,255,255,0.5);
+	opacity:0;
+	visibility:hidden;
+	transition:all .3s ease;
+}
+body.loading .popups #overlay{
+	opacity:1;
+	visibility:visible
+}
+
+/*---------------------------------------
+
+	ВЕРХНИЙ КОЛОНТИТУЛ
+
+-----------------------------------------*/
+/*---------------------------------------
+	гл.меню
+-----------------------------------------*/
+#header .main-title{
+	margin:40px;
+}
+#header .main-menu{
+	list-style:none;
+	padding:0;
+	margin:0 0 20px 30px;
+}
+#header .main-menu > li{
+	float:left;
+}
+#header .main-menu:after{
+	content:"";
+	display:block;
+	clear:both
+}
+/*---------------------------------------
+
+	ГЛАВНЫЙ КОЛОНТИТУЛ
+
+-----------------------------------------*/
+/*---------------------------------------
+	Блок с контентом
+-----------------------------------------*/
+#main .content-block{
+	border:1px solid #161616;
+	min-height:360px;
+	padding:20px 70px;
+}
+/*---------------------------------------
+	Forms
+-----------------------------------------*/
+#main .content-block .form{
+	width:250px;
+}
+#main .content-block .form .row{
+	display:block;
+	height:50px;
+	font:13px/25px Arial;
+}
+#main .content-block .form .inptext{
+	width:160px;
+	padding:0 5px;
+	float:right;
+	transition:all .3s ease;
+	border:1px solid #999;
+}
+#main .content-block .form .selectwrap{
+	width:172px;
+	float:right;
+}
+#main .content-block .form .inptext,
+#main .content-block .form .selectwrap select{
+	font:15px/25px Arial;
+	height:25px;
+}
+#main .content-block .form .inptext:hover{
+	border-color:#555
+}
+#main .content-block .form .inptext:focus{
+	box-shadow:0 0 5px green;
+	color:#000;
+}
+#main .content-block .form .inptext.error{
+	border-color:red
+}
+#main .content-block .form .button{
+	float:right;
+	border-radius:0;
+	font-size:12px;
+}
+
+/*---------------------------------------
+	Login
+-----------------------------------------*/
+#main .content-block .form.login{
+	margin:80px auto 0;
+}
+/*---------------------------------------
+	My Contacts
+-----------------------------------------*/
+#main .content-block .contact{
+	position:relative;
+}
+#main .content-block .contact .glob-publish{
+	position:absolute;
+	right:0;
+	top:0
+}
+#main .content-block .contact .glob-publish input{
+	margin-right:0;
+	vertical-align:middle
+}
+#main .content-block .contact .form{
+	width:auto;
+}
+#main .content-block .contact .form .col{
+	float:left;
+	width:250px;
+	margin-left:69px;
+}
+#main .content-block .contact .form .col:first-child{
+	margin-left:0;
+}
+#main .content-block .contact .form .col .butt-add{
+	float:right;
+	margin:-10px 20px 0;
+	font-size:15px;
+	text-decoration:none;
+	border-bottom:1px dotted;
+}
+#main .content-block .contact .form .col h6{
+    margin: 0 0 20px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+	color:#777;
+	text-decoration:underline
+}
+#main .content-block .contact .form .col .row .chkbx{
+	float:right;
+	margin:5px 0 0 5px;
+}
+
+#main .content-block .contact .form .subm-wrap{
+	clear:both;
+	height:30px;
+	padding-top:10px;
+}
+
+/*---------------------------------------
+	Public Phonebook
+-----------------------------------------*/
+#main .content-block .phonebook{
+
+}
+#main .content-block .phonebook ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+#main .content-block .phonebook .phonebook-list{
+	padding:0 0 0 20px;
+	margin:0 auto;
+}
+#main .content-block .phonebook .phonebook-list .row{
+	margin-bottom:4px;
+}
+#main .content-block .phonebook .phonebook-list .row .static .fullname{
+	font-size:17px;
+	display:inline-block;
+	width:170px;
+	padding-right:10px;
+}
+#main .content-block .phonebook .phonebook-list .row .static .butt{
+	text-decoration:none;
+	border-bottom:1px dotted;
+}
+#main .content-block .phonebook .phonebook-list .row .static .butt .hide-title{display:none}
+#main .content-block .phonebook .phonebook-list .row .static .butt.active .hide-title{display:inline}
+#main .content-block .phonebook .phonebook-list .row .static .butt.active .view-title{display:none}
+
+/*подгружаемые данные*/
+#main .content-block .phonebook .phonebook-list .row .details:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+#main .content-block .phonebook .phonebook-list .row .details .col{
+	float:left;
+	width:236px;
+	margin:0 0 8px 80px;
+	color:#777;
+}
+#main .content-block .phonebook .phonebook-list .row .details .col:first-child{
+	margin-left:0;
+}
+#main .content-block .phonebook .phonebook-list .row .details .col h6{
+	padding-top:5px;
+	margin:0 0 10px;
+	font-size:14px;
+	font-weight:normal;
+	text-align:center;
+}
+#main .content-block .phonebook .phonebook-list .row .details .col p{
+	margin:0 0 5px
+}
+#main .content-block .phonebook .phonebook-list .row .details .col p:last-child{
+	margin-bottom:0;
+}
+/*---------------------------------------
+
+	НИЖНИЙ КОЛОНТИТУЛ
+
+-----------------------------------------*/
+#footer{
+	height:50px;
+}
